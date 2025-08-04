@@ -4,16 +4,18 @@ import com.apd.userservice.common.enums.Gender;
 import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
 @Entity
+@Table(name = "tbl_user")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "tbl_user")
+@Builder
 class UserEntity {
     @Id
     private UUID id;

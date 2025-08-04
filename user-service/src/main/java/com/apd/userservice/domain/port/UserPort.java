@@ -2,8 +2,11 @@ package com.apd.userservice.domain.port;
 
 import com.apd.userservice.domain.dto.UserDTO;
 
-public interface UserPort {
-    UserDTO registerUser(String name);
+import java.util.List;
 
-    UserDTO update(UserDTO userDTO);
+public interface UserPort {
+    List<UserDTO> fetchAllUsers();
+
+    UserDTO registerUser(UserDTO userDTO);
+
 }
