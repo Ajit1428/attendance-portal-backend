@@ -36,4 +36,19 @@ class UserMapper {
                 .profileUrl(userEntity.getProfileUrl())
                 .build();
     }
+
+    UserDTO toRawUserDTO(UserEntity userEntity) {
+        return UserDTO.builder()
+                .id(userEntity.getId())
+                .name(userEntity.getName())
+                .email(userEntity.getEmail())
+                .address(userEntity.getAddress())
+                .dateOfBirth(userEntity.getDateOfBirth())
+                .phoneNumber(userEntity.getPhoneNumber())
+                .gender(userEntity.getGender())
+                .joinedDate(userEntity.getJoinedDate())
+                .profileUrl(userEntity.getProfileUrl())
+                .password(userEntity.getPassword())
+                .build();
+    }
 }

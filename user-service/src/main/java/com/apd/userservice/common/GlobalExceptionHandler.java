@@ -13,7 +13,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<Map<String, String>> handleRuntimeException(RuntimeException ex){
         Map<String, String> errorBody = new HashMap<>();
-        errorBody.put("message", "Error while registering the user");
+        System.out.println(ex.getMessage());
+        errorBody.put("message", ex.getMessage());
         return ResponseEntity.status(500).body(errorBody);
     }
 }

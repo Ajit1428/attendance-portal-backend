@@ -22,4 +22,5 @@ public class UserDTO {
     private Long joinedDate;
     private Long updatedAt;
     private String profileUrl;
+    private String accessToken;
 }
